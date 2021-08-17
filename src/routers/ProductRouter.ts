@@ -8,8 +8,9 @@ import { ProductValidator } from '../validators/ProductValidator';
 
     constructor(){
         this.router = Router();
-        
+
         this.getRoutes();
+        
         this.postRoutes();
         this.patchRoutes();
         this.deleteRoutes();

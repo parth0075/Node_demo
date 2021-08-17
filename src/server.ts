@@ -3,6 +3,7 @@ import * as express from "express";
 import * as mongoose from "mongoose";
 import { getEnvironmentVariables } from "./environments/env";
 import  ProductRouter  from "./routers/ProductRouter";
+import  UserRouter  from "./routers/UserRouter";
 export class Server {
   public app: express.Application = express();
 
@@ -35,6 +36,7 @@ export class Server {
 
   setRoutes() {
       this.app.use('/api/product',ProductRouter);
+      this.app.use('/api/user',UserRouter);
   }
 
   error404Handler() {
